@@ -88,6 +88,7 @@
                     <span>{{ $t("Keyword") }}:</span>
                     <span class="keyword">{{ monitor.keyword }}</span>
                 </span>
+                <span v-if="monitor.type === 'vless'">VLESS: {{ monitor.hostname || 'http://www.gstatic.com/generate_204' }}</span>
                 <span v-if="monitor.type === 'mongodb'">{{ filterPassword(monitor.databaseConnectionString) }}</span>
                 <span v-if="monitor.type === 'mqtt'">
                     MQTT: {{ monitor.hostname }}:{{ monitor.port }}/{{ monitor.mqttTopic }}

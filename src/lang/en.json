@@ -1,5 +1,9 @@
 {
     "languageName": "English",
+    "vlessMonitorType": "VLESS (TCP/REALITY, gRPC, XHTTP)",
+    "vlessUriHelp": "Paste a vless:// link with type=tcp, grpc or xhttp. Xray Core is required on the server.",
+    "vlessProbeUrl": "Probe URL (HTTP)",
+    "vlessProbeHelp": "Leave empty to use http://www.gstatic.com/generate_204. The request is sent through VLESS.",
     "setupDatabaseChooseDatabase": "Which database would you like to use?",
     "setupDatabaseEmbeddedMariaDB": "You don't need to set anything. This Docker image has embedded and configured MariaDB for you automatically. Uptime Kuma will connect to this database via Unix socket.",
     "setupDatabaseMariaDB": "Connect to an external MariaDB database. You need to set the database connection information.",

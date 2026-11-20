@@ -1,5 +1,9 @@
 {
     "languageName": "Русский",
+    "vlessMonitorType": "VLESS (TCP/REALITY, gRPC, XHTTP)",
+    "vlessUriHelp": "Вставьте ссылку vless:// с type=tcp, grpc или xhttp. На сервере нужен Xray Core.",
+    "vlessProbeUrl": "Адрес проверки (HTTP)",
+    "vlessProbeHelp": "Если оставить пустым, будет использован http://www.gstatic.com/generate_204. Запрос идёт через VLESS.",
     "checkEverySecond": "Проверка каждые {0} секунд",
     "retriesDescription": "Максимальное число попыток перед тем, как сервис будет помечен как неработающий и будет отправлено уведомление",
     "ignoreTLSError": "Игнорировать ошибки TLS/SSL для сайтов с HTTPS",

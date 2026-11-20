@@ -40,6 +40,7 @@
                                         <option value="http">HTTP(s)</option>
                                         <option value="keyword">HTTP(s) - {{ $t("Keyword") }}</option>
                                         <option value="port">TCP Port</option>
+                                        <option value="vless">{{ $t("vlessMonitorType") }}</option>
                                         <option value="ping">Ping</option>
                                         <option value="dns">DNS</option>
                                         <option value="docker">
@@ -186,6 +187,18 @@
                             </div>
 
                             <!-- URL -->
+                            <template v-if="monitor.type === 'vless'">
+                                <div class="my-3">
+                                    <label for="vless-uri" class="form-label">VLESS URI</label>
+                                    <HiddenInput id="vless-uri" v-model="monitor.url" :maxlength="4096" required />
+                                    <div class="form-text">{{ $t("vlessUriHelp") }}</div>
+                                </div>
+                                <div class="my-3">
+                                    <label for="vless-probe" class="form-label">{{ $t("vlessProbeUrl") }}</label>
+                                    <input id="vless-probe" v-model="monitor.hostname" type="url" class="form-control" maxlength="255" placeholder="http://www.gstatic.com/generate_204" pattern="http://.+" />
+                                    <div class="form-text">{{ $t("vlessProbeHelp") }}</div>
+                                </div>
+                            </template>
                             <div
                                 v-if="
                                     monitor.type === 'websocket-upgrade' ||
